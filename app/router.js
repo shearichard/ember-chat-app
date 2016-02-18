@@ -14,6 +14,7 @@ Router.map(function() {
   this.route('chats', function(){
       this.route('chat', {path: '/:chat_id'});
   });
+  this.route('fruits');
 });
 
 export default Router;
