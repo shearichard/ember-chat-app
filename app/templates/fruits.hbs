@@ -3,13 +3,11 @@
 <div class="row">
   <div class="col-md-5">
 
-    {{!--
     <form class="form-inline">
-        {{input class="form-control" value=newUser.name placeholder="New nickname"}}
-        {{input class="form-control" value=newUser.email placeholder="User email"}}
-      <button type="submit" {{action 'addUser' newUser}} class="btn btn-default">Add</button>
+        {{input class="form-control" value=newFruit.name placeholder="Fruit Name"}}
+        {{input class="form-control" value=newFruit.price placeholder="Fruit Price"}}
+      <button type="submit" {{action 'addFruit' newFruit}} class="btn btn-default">Add</button>
     </form>
-    --}}
 
     <div class="list-group">
       {{#each model as |fruit|}}
