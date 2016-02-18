@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('users', function(){
       this.route('user', {path: '/:user_id'});
   });
+  this.route('chat');
 });
 
 export default Router;
