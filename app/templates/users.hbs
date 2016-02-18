@@ -1,17 +1,24 @@
-<h1>Users Page</h1>
+<h1>User management</h1>
 
-<form>
- {{input value=newUser.name placeholder='New Nickname'}}
- {{input value=newUser.email placeholder='User email'}}
+<div class="row">
+  <div class="col-md-5">
 
- <button type="submit" {{action 'addUser' newUser }}>Add</button>
+    <form class="form-inline">
+        {{input class="form-control" value=newUser.name placeholder="New nickname"}}
+        {{input class="form-control" value=newUser.email placeholder="User email"}}
+      <button type="submit" {{action 'addUser' newUser}} class="btn btn-default">Add</button>
+    </form>
 
-</form>
+    <div class="list-group">
+      {{#each model as |user|}}
+        {{#link-to "users.user" user class="list-group-item"}}{{user.name}}{{/link-to}}
+      {{/each}}
+    </div>
+  </div>
 
-<div class="list-group">
-{{#each model as |user|}}
-    <div class="list-group-item">{{user.name}}</div>
-{{/each}}
+  <div class="col-md-7">
+    {{outlet}}
+  </div>
 </div>
 
-{{outlet}}
+
