@@ -11,6 +11,9 @@ Router.map(function() {
       this.route('user', {path: '/:user_id'});
   });
   this.route('chat');
+  this.route('chats', function(){
+      this.route('chat', {path: '/:chat_id'});
+  });
 });
 
 export default Router;
